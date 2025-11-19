@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biogas Simulation Result</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>🌱 Simulation Results</h1>
+</header>
+<main>
+    <div class="card result-card">
+        <p><strong>Waste Type:</strong> {{ result.waste }}</p>
+        <p><strong>Mass:</strong> {{ result.mass }} kg</p>
+        <p><strong>Temperature:</strong> {{ result.temperature }} °C</p>
+        <p><strong>Yield Factor:</strong> {{ result.yield_factor }}</p>
+        <p><strong>Daily Biogas Output:</strong> {{ result.daily_output }} m³</p>
+        <p><strong>Cumulative Output:</strong> {{ result.total_output }} m³</p>
+        <p><em>Tip:</em> {{ result.tip }}</p>
+        <a href="/">Run Another Simulation</a>
+    </div>
+
+    {% if history %}
+    <div class="card">
+        <h2>Last 5 Simulations</h2>
+        <ul>
+            {% for item in history %}
+            <li>{{ item.waste }} - {{ item.mass }}kg - {{ item.daily_output }} m³/day</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</main>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

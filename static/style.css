@@ -1,0 +1,135 @@
+/* ===== Body & General Styles ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #f0f9f0, #e0f7e0);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #2e8b57;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+/* ===== Card (Calculator & Result) ===== */
+.card, .result-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.card h2, .result-card h2 {
+    color: #2e8b57;
+    text-align: center;
+}
+
+/* ===== Labels & Inputs ===== */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* ===== Buttons ===== */
+button, .btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #2e8b57;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+button:hover, .btn:hover {
+    background-color: #256b45;
+}
+
+/* ===== Result Card Links ===== */
+.result-card a {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #2e8b57;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* ===== Lists ===== */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* ===== Services Section ===== */
+.services {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+.services h1 {
+    text-align: center;
+    color: #2e8b57;
+    margin-bottom: 30px;
+}
+
+.service {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.service h2 {
+    color: #2e8b57;
+    margin-bottom: 10px;
+}
+
+.service p {
+    margin-bottom: 15px;
+}
+
+/* ===== Form Group (Optional) ===== */
+.form-group {
+    margin-bottom: 10px;
+}
