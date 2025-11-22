@@ -84,15 +84,15 @@ def submit_quote():
     with open(csv_file, 'a', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         if not file_exists:
-            # Write header if file does not exist
             writer.writerow(['Timestamp', 'Name', 'Email', 'Phone', 'Service', 'Message'])
         writer.writerow([timestamp, name, email, phone, service, message])
 
-    # Redirect back to home page
     return redirect(url_for('index'))
 
 # -------------------
-# Run Flask App
+# Run Flask App (RENDER-FRIENDLY)
 # -------------------
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
